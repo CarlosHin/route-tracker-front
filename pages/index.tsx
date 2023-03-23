@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Inter } from 'next/font/google'
 import { useEffect, useState } from 'react'
-import { config } from './_config'
+import { config } from '../config'
 
 interface User {
   name: string;
