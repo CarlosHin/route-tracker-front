@@ -3,8 +3,11 @@ import { Inter } from 'next/font/google'
 import { useEffect, useState } from 'react'
 import { config } from './_config'
 
+interface User {
+  name: string;
+}
 export default function Home() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState<User[]>([])
   const getUsers = async () => {
     const url = `${config.backendUrl}/public/users`;
     const res = await axios.get(url, {
